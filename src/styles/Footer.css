@@ -1,0 +1,49 @@
+.footer {
+  background-color: var(--hsf);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  height: 15rem;
+  gap: 2rem;
+}
+
+.socialContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+}
+
+.logos {
+  background-color: white;
+  width: 3rem;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+.linkedinLogo {
+  padding: 0rem;
+}
+
+.githubLogo {
+  padding: 0.3rem;
+}
+
+.gmailLogo {
+  padding: 0.3rem;
+}
+
+.whatsappLogo {
+  padding: 0.2rem;
+}
+
+.logos:hover {
+  width: 4rem;
+}

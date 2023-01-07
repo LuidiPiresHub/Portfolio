@@ -1,0 +1,16 @@
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--textColor);
+}
+
+.AboutContent {
+  flex-grow: 1;
+  padding: 7rem 0;
+}
+
+.content {
+  height: 100vh;
+  border: 1px solid blue;
+}

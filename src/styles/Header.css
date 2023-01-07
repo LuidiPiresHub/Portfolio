@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: var(--hsf);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.portfo:hover {
+  cursor: pointer;
+}
+
+.portfo {
+  color: white;
+}
+
+.lio {
+  color: red;
+}
+
+.links {
+  margin: 0 1rem;
+}
+
+.listLinks {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.listLinks li, a {
+  cursor: pointer;
+  transition: 300ms;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.listLinks li a:hover {
+  color: red;
+}
