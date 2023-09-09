@@ -11,7 +11,8 @@ export default function ThemeChanger() {
   }
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--bg', isDarkMode ? 'rgb(33, 33, 33)' : 'rgb(240, 240, 240)');
+    document.documentElement.style.setProperty('--bgPk', isDarkMode ? 'rgb(33, 33, 33)' : 'rgb(240, 240, 240)');
+    document.documentElement.style.setProperty('--bgSc', isDarkMode ? 'rgb(50, 50, 50)' : 'rgb(255, 255, 255)');
     document.documentElement.style.setProperty('--cl', isDarkMode ? 'rgb(240, 240, 240)' : 'rgb(33, 33, 33)');
   }, [isDarkMode])
 

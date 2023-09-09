@@ -10,6 +10,12 @@ export default function Header() {
     setIsActive((prevState) => !prevState);
     setLeft(isActive ? -100 : 0)
   }
+
+  if (isActive) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
   
   return (
     <header className={styles.header}>
@@ -22,7 +28,7 @@ export default function Header() {
       <ul className={styles.ul} style={{ left: `${left}vw` }}>
         <li>Inicio</li>
         <li>Sobre mim</li>
-        <li>Habilidade</li>
+        <li>Habilidades</li>
         <li>Contato</li>
         <li><ThemeChanger /></li>
       </ul>
