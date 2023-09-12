@@ -1,14 +1,14 @@
 .themeChanger {
-  border-radius: 50px;
-  background-color: black;
-  padding: 10px;
-  height: 35px;
-  width: 70px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
+  background-color: black;
+  border-radius: 50px;
   cursor: pointer;
+  display: flex;
+  height: 35px;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+  width: 70px;
 }
 
 .checkbox {
@@ -17,13 +17,13 @@
 }
 
 .ball {
-  position: absolute;
   background-color: white;
-  height: 25px;
-  width: 25px;
-  left: 5px;
   border-radius: 50%;
+  height: 25px;
+  left: 5px;
+  position: absolute;
   transition: 100ms linear;
+  width: 25px;
 }
 
 .checkbox:checked + .ball {

@@ -1,17 +1,17 @@
 .aboutContainer {
-  padding: 2rem;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 2rem;
 }
 
 .myPhoto {
-  width: 100%;
-  max-width: 300px;
+  border: 5px solid var(--cl);
   border-radius: 50%;
   margin-bottom: 2rem;
-  border: 5px solid var(--cl);
+  max-width: 300px;
   transition: 300ms ease-in-out;
+  width: 100%;
 }
 
 .name {
@@ -28,20 +28,20 @@
 }
 
 .description {
-  max-width: 610px;
   font-size: 18px;
   font-weight: 500;
   margin-top: 1rem;
+  max-width: 610px;
 }
 
-@media (max-width: 650px) {
+@media (width <= 650px) {
   .jobContainer {
     flex-direction: column;
     gap: 0;
   }
 }
 
-@media (max-width: 425px) {
+@media (width <= 425px) {
   .name {
     font-size: 1.3rem;
   }
