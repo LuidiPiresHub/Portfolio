@@ -1,8 +1,6 @@
-/* :root {
-  --bgPk: rgb(240, 240, 240)
-  --bgSc rgb(255, 255, 255)
-  --cl: rgb(33, 33, 33)
-} */
+:root {
+  --padding: 2rem
+}
 
 * {
   box-sizing: border-box;

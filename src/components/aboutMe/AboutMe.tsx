@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-import myPhoto from '../../images/myPhoto.jpg';
+import myPhoto from '../../assets/myPhoto.jpg';
 import styles from './AboutMe.module.css';
 
 export default function AboutMe() {
