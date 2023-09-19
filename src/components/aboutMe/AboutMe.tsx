@@ -7,7 +7,7 @@ import certificates from '../../data/certificates';
 
 export default function AboutMe() {
   return (
-    <section className={styles.aboutContainer}>
+    <section className={styles.aboutContainer} id='sobre-mim'>
       <img className={styles.myPhoto} src={myPhoto} alt='Foto de Luidi Pires' />
       <div>
         <h2 className={styles.name}>Luidi Pires</h2>
@@ -54,10 +54,11 @@ export default function AboutMe() {
           </p>
         </div>
       </section>
+      <h2>Meus Certificados</h2>
       <section className={styles.certificatesContainer}>
         {certificates.map(({ image, name }) => (
-          <a href={image} target='_blank'>
-            <img src={image} alt={name} key={name} className={styles.certificate} />
+          <a href={image} target='_blank' key={name}>
+            <img src={image} alt={name} className={styles.certificate} />
           </a>
         ))}
       </section>

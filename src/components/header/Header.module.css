@@ -1,12 +1,15 @@
 .header {
   align-items: center;
-  background-color: var(--bgSc);
   color: var(--cl);
   display: flex;
   height: 100px;
   justify-content: space-between;
   padding: var(--padding);
+  position: fixed;
+  top: 0;
   transition: 300ms ease-in-out;
+  width: 100%;
+  z-index: 1;
 }
 
 .mobileNavibar {
@@ -16,11 +19,33 @@
   display: none;
 }
 
+.title button {
+  background-color: transparent;
+  border: none;
+  color: var(--cl);
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 700;
+}
+
 .ul {
   display: flex;
   font-size: 23px;
   gap: 1rem;
   z-index: 1;
+}
+
+.ul li button {
+  background-color: transparent;
+  border: none;
+  color: var(--cl);
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.ul a {
+  color: var(--cl);
+  text-decoration: none;
 }
 
 
