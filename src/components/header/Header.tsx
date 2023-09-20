@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ThemeChanger from '../themeChanger/ThemeChanger'
-import styles from './Header.module.css'
+import ThemeChanger from '../themeChanger/ThemeChanger';
+import styles from './Header.module.css';
 
 export default function Header() {
   const [left, setLeft] = useState(-100);
@@ -9,10 +9,10 @@ export default function Header() {
 
   const handleClick = () => {
     setIsActive((prevState) => !prevState);
-    setLeft(isActive ? -100 : 0)
-  }
+    setLeft(isActive ? -100 : 0);
+  };
 
-  if (isActive) {
+  if (isActive && window.innerWidth <= 768) {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = 'auto';
@@ -23,32 +23,39 @@ export default function Header() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <header className={styles.header} style={{ backgroundColor: isTranparent ? 'transparent' : 'var(--bgSc)' }}>
+    <header className={styles.header} style={{
+      backgroundColor: isTranparent ? 'transparent' : 'var(--bgSc)',
+      boxShadow: isTranparent ? 'none' : '0 5px 5px 5px rgba(0 0 0 / 25%)',
+    }}>
       <button type='button' className={styles.mobileNavibar} onClick={handleClick}>
-        <span className={`${styles.bar} ${isActive && styles.barActive}`}></span>
-        <span className={`${styles.bar} ${isActive && styles.barActive}`}></span>
-        <span className={`${styles.bar} ${isActive && styles.barActive}`}></span>
+        <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
+        <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
+        <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
+
       </button>
       <h1 className={styles.title}>
         <button type='button' onClick={scrollToTop}>Portfolio</button>
       </h1>
       <ul className={styles.ul} style={{ left: `${left}vw` }}>
         <li>
-          <button type='button' onClick={scrollToTop}>Inicio</button>
+          <button type='button' onClick={() => {
+            scrollToTop();
+            handleClick();
+          }}>Inicio</button>
         </li>
         <li>
-          <a href="#sobre-mim">Sobre mim</a>
+          <a onClick={handleClick} href="#sobre-mim">Sobre mim</a>
         </li>
         <li>
-          <a href="#habilidades">Habilidades</a>
+          <a onClick={handleClick} href="#habilidades">Habilidades</a>
         </li>
         <li>
-          <a href="#contato">Contato</a>
+          <a onClick={handleClick} href="#contato">Contato</a>
         </li>
         <li>
           <ThemeChanger />
         </li>
       </ul>
     </header>
-  )
+  );
 }
