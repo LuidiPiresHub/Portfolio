@@ -1,27 +1,38 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Portfólio de Luídi Pires
 
-Currently, two official plugins are available:
+Este é o meu portfólio, desenvolvido utilizando React, Typescript e Vite. Foi criado com o propósito de demonstrar e aprimorar minhas habilidades em desenvolvimento **Front-End**, além de servir como plataforma para a divulgação dos meus serviços.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Experimente a Aplicação Online
 
-## Expanding the ESLint configuration
+Você pode acessar a aplicação online para visualizar o meu portfólio em:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### https://luidi-pires-portfolio.vercel.app.
 
-- Configure the top-level `parserOptions` property like this:
+## Como Testar Localmente
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### Clone o Repositório:
+```bash
+   git clone git@github.com:LuidiPiresHub/PortfolioV3.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Acesse a Pasta:
+```bash
+    cd PortfolioV3
+```
+
+### Instale as Dependências:
+```bash
+    npm install
+```
+
+### Execute Localmente:
+```bash
+    npm run dev
+```
+
+### Agora, você pode abrir um navegador da web e acessar http://localhost:5173 para visualizar o meu portfólio em seu ambiente de desenvolvimento.
+
+### Encontrou algum bug ou tem alguma sugestão?
+
+### Fique à vontade para entrar em contato!
