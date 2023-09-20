@@ -12,5 +12,5 @@ export default function Skills() {
         </picture>
       ))}</section>
     </div>
-  )
+  );
 }

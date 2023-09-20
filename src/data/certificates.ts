@@ -25,4 +25,4 @@ export default [
     name: 'Certificado de Desenvolvimento Web',
     image: certificate5,
   },
-]
+];

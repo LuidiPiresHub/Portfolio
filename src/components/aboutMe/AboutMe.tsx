@@ -2,7 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 import myPhoto from '../../assets/photos/myPhoto.jpg';
 import styles from './AboutMe.module.css';
 import { FaDesktop, FaCog, FaDownload } from 'react-icons/fa';
-import cv from '../../assets/cv/LuidiPires.pdf'
+import cv from '../../assets/cv/LuidiPires.pdf';
 import certificates from '../../data/certificates';
 
 export default function AboutMe() {
@@ -54,7 +54,7 @@ export default function AboutMe() {
           </p>
         </div>
       </section>
-      <h2>Meus Certificados</h2>
+      <h2 className={styles.subtitle}>Meus Certificados</h2>
       <section className={styles.certificatesContainer}>
         {certificates.map(({ image, name }) => (
           <a href={image} target='_blank' key={name}>
@@ -67,5 +67,5 @@ export default function AboutMe() {
         <FaDownload />
       </a>
     </section>
-  )
+  );
 }
