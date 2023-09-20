@@ -16,3 +16,11 @@ body {
   color: var(--cl);
   transition: 300ms ease-in-out;
 }
+
+::-webkit-scrollbar {
+  background-color:var(--scrollBar);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBarThumb);
+}
