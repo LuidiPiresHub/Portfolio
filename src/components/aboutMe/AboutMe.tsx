@@ -7,9 +7,9 @@ import certificates from '../../data/certificates';
 
 export default function AboutMe() {
   return (
-    <section className={styles.aboutContainer} id='sobre-mim'>
+    <section className={styles.aboutContainer}>
       <img className={styles.myPhoto} src={myPhoto} alt='Foto de Luidi Pires' />
-      <div>
+      <div id='sobre-mim'>
         <h2 className={styles.name}>Luidi Pires</h2>
         <div className={styles.jobContainer}>
           <h1 className={styles.job}>Desenvolvedor</h1>
