@@ -13,7 +13,7 @@ Você pode acessar a aplicação online para visualizar o meu portfólio em:
 
 ### Clone o Repositório:
 ```bash
-   git clone git@github.com:LuidiPiresHub/PortfolioV3.git
+    git clone git@github.com:LuidiPiresHub/PortfolioV3.git
 ```
 
 ### Acesse a Pasta:
