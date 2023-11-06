@@ -13,22 +13,22 @@ Você pode acessar a aplicação online para visualizar o meu portfólio em:
 
 ### Clone o Repositório:
 ```bash
-    git clone git@github.com:LuidiPiresHub/PortfolioV3.git
+git clone git@github.com:LuidiPiresHub/Portfolio.git
 ```
 
 ### Acesse a Pasta:
 ```bash
-    cd PortfolioV3
+cd PortfolioV3
 ```
 
 ### Instale as Dependências:
 ```bash
-    npm install
+npm install
 ```
 
 ### Execute Localmente:
 ```bash
-    npm run dev
+npm run dev
 ```
 
 ### Agora, você pode abrir um navegador da web e acessar http://localhost:5173 para visualizar o meu portfólio em seu ambiente de desenvolvimento.
