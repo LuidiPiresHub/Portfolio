@@ -18,7 +18,7 @@ git clone git@github.com:LuidiPiresHub/Portfolio.git
 
 ### Acesse a Pasta:
 ```bash
-cd PortfolioV3
+cd Portfolio
 ```
 
 ### Instale as Dependências:
