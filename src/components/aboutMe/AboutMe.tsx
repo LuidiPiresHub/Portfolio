@@ -1,14 +1,28 @@
 import { TypeAnimation } from 'react-type-animation';
-import myPhoto from '../../assets/photos/myPhoto.jpg';
 import styles from './AboutMe.module.css';
 import { FaDesktop, FaCog, FaDownload } from 'react-icons/fa';
 import cv from '../../assets/cv/LuidiPires.pdf';
 import certificates from '../../data/certificates';
 
 export default function AboutMe() {
+  const calculateAge = (): number => {
+    const birthDate = new Date('2003-10-28');
+    const today = new Date();
+    let ageDifferenceInYears = today.getFullYear() - birthDate.getFullYear();
+
+    const hasBirthdayOccurredThisYear = today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+    if (!hasBirthdayOccurredThisYear) {
+      ageDifferenceInYears--;
+    }
+    return ageDifferenceInYears;
+  };
+
+
   return (
     <section className={styles.aboutContainer}>
-      <img className={styles.myPhoto} src={myPhoto} alt='Foto de Luidi Pires' />
+      <img className={styles.myPhoto} src='https://avatars.githubusercontent.com/u/104798394?v=4' alt='Foto de Luidi Pires' />
       <div id='sobre-mim'>
         <h2 className={styles.name}>Luidi Pires</h2>
         <div className={styles.jobContainer}>
@@ -29,7 +43,7 @@ export default function AboutMe() {
           />
         </div>
         <p className={styles.description}>
-          Olá, sou Luidi Pires, um jovem apaixonado por tecnologia e programação, com 19 anos de idade.
+          Olá, sou Luidi Pires, um jovem apaixonado por tecnologia e programação, com {calculateAge()} anos de idade.
           Como desenvolvedor web, busco constantemente desafios empolgantes e oportunidades de aprendizado.
           Minha jornada no mundo da programação é guiada pela curiosidade e pela busca incansável por soluções criativas.
           Bem-vindo ao meu portfólio, onde compartilho minha paixão pela construção de experiências digitais incríveis.
@@ -57,7 +71,7 @@ export default function AboutMe() {
       <h2 className={styles.subtitle}>Meus Certificados</h2>
       <section className={styles.certificatesContainer}>
         {certificates.map(({ image, name }) => (
-          <a href={image} target='_blank' key={name}>
+          <a href={image} target='_blank' rel='noopener noreferrer' key={name}>
             <img src={image} alt={name} className={styles.certificate} />
           </a>
         ))}
