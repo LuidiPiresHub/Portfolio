@@ -2,6 +2,10 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const message = 'Olá, Te encontrei no seu portfólio e gostaria de conversar com você.';
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://api.whatsapp.com/send/?phone=+5521988687037&text=${encodedMessage}`;
+  
   return (
     <footer id='contato' className={styles.footer}>
       <ul className={styles.socialList}>
@@ -16,7 +20,7 @@ export default function Footer() {
           </a>
         </li>
         <li className={styles.list}>
-          <a href="https://api.whatsapp.com/send/?phone=+5521988687037&text=Olá%2C%20Te%20encontrei%20pelo%20seu%20Porfólio!%20%0AGostaria%20de%20saber%20mais%20sobre%20seus%20serviços!!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={styles.link}>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={styles.link}>
             <FaWhatsapp />
           </a>
         </li>
