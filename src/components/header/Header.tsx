@@ -23,10 +23,7 @@ export default function Header() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <header className={styles.header} style={{
-      backgroundColor: isTranparent ? 'transparent' : 'var(--bgSc)',
-      boxShadow: isTranparent ? 'none' : '0 5px 5px 5px rgba(0 0 0 / 25%)',
-    }}>
+    <header className={`${styles.header} ${!isTranparent ? styles.filled : ''}`.trim()}>
       <button type='button' className={styles.mobileNavibar} onClick={handleClick}>
         <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
         <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
@@ -48,6 +45,9 @@ export default function Header() {
         </li>
         <li>
           <a onClick={handleClick} href="#habilidades">Habilidades</a>
+        </li>
+        <li>
+          <a onClick={handleClick} href="#projetos">Projetos</a>
         </li>
         <li>
           <a onClick={handleClick} href="#contato">Contato</a>
