@@ -30,3 +30,7 @@
   left: 65px;
   transform: translateX(-100%);
 }
+
+.icon {
+  color: rgb(241 195 15);
+}
