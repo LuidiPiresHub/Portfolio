@@ -9,7 +9,7 @@ Você pode acessar a aplicação online para visualizar o meu portfólio em:
 
 ### https://luidi-pires-portfolio.vercel.app.
 
-## Como Testar Localmente
+## Como Usar Localmente
 
 ### Clone o Repositório:
 ```bash
@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-### Agora, você pode abrir um navegador da web e acessar http://localhost:5173 para visualizar o meu portfólio em seu ambiente de desenvolvimento.
+### Agora, você pode abrir um navegador da web e acessar http://localhost:3000 para visualizar o meu portfólio em seu ambiente de desenvolvimento.
 
 ### Encontrou algum bug ou tem alguma sugestão?
 
