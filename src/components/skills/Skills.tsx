@@ -1,16 +1,18 @@
-import styles from './Skills.module.css';
 import techData from '../../data/techs';
+import styles from './Skills.module.css';
 
 export default function Skills() {
   return (
-    <div id='habilidades'>
+    <section id='habilidades' className={styles.skills}>
       <h2 className={styles.title}>Tecnologias que eu trabalho</h2>
-      <section className={styles.pictureContainer}>{techData.map(({ name, url }) => (
-        <picture key={name} className={styles.picture}>
-          <img src={url} alt="name" className={styles.tech} />
-          <span>{name}</span>
-        </picture>
-      ))}</section>
-    </div>
+      <ul className={styles.ul}>
+        {techData.map(({ name, url }) => (
+          <li key={name} className={styles.li}>
+            <img src={url} alt={name} className={styles.tech} />
+            <span>{name}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
