@@ -1,33 +1,37 @@
 .footer {
-  align-items: center;
-  background-color: var(--bgSc);
-  box-shadow: 0 -2px 5px 5px rgba(0 0 0 / 25%);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 2rem 1rem;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.socialList {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
-  min-height: 30vh;
-  padding: 2rem;
+  list-style: none;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.list {
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .link {
-  align-items: center;
-  color: var(--cl);
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  gap: 1rem;
-  text-decoration: none;
-  transition: 300ms ease-in-out;
-  width: 100px;
+  color: var(--text-primary)
 }
 
-.logo {
-  height: auto;
-  width: 70px;
-}
-
-.link:hover {
-  cursor: pointer;
+.list:hover, .link:hover {
+  color: #00e0ff;
   transform: scale(1.2) translateY(-5px);
+}
+
+.copy {
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
