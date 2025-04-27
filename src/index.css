@@ -1,6 +1,8 @@
 :root {
   --padding: 2rem;
   --transition: 300ms ease-in-out;
+  --transition-fast: 100ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
   --header-height: 100px;
 }
 
@@ -16,6 +18,9 @@
 body {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
+}
+
+body.transition {
   transition: background-color var(--transition), color var(--transition);
 }
 
@@ -37,8 +42,14 @@ body.dark {
 
 ::-webkit-scrollbar {
   background-color: var(--scroll-bar);
+  width: 0.8rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-bar-thumb);
+}
+
+.pageSection {
+  padding: var(--padding);
+  scroll-margin-top: var(--header-height);
 }
