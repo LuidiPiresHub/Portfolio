@@ -1,24 +1,23 @@
 import { FaSun, FaMoon } from 'react-icons/fa';
 import styles from './ThemeChanger.module.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { getLocalstorageTheme, setLocalstorageTheme } from '../../utils/localstorage';
 import { ITheme } from '../../interfaces/theme.interface';
 
 export default function ThemeChanger() {
   const [theme, setTheme] = useState<ITheme>(() => {
     const theme = getLocalstorageTheme();
-    return theme ? theme : 'light';
+    const selectedTheme = theme ? theme : 'light';
+    document.body.className = selectedTheme;
+    return selectedTheme;
   });
 
   const handleTheme = (checked: boolean) => {
-    const currentTheme = checked ? 'dark' : 'light';
-    setTheme(currentTheme);
-    setLocalstorageTheme(currentTheme);
+    const selectedTheme = checked ? 'dark' : 'light';
+    document.body.className =`${selectedTheme} transition`;
+    setTheme(selectedTheme);
+    setLocalstorageTheme(selectedTheme);
   };
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
 
   return (
     <label htmlFor='themeChanger' className={styles.themeChanger}>
