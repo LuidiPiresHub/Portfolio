@@ -1,57 +1,55 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ThemeChanger from '../themeChanger/ThemeChanger';
 import styles from './Header.module.css';
+import { scrollToTop } from '../../utils/scrollToTop';
 
 export default function Header() {
-  const [left, setLeft] = useState(-100);
-  const [isActive, setIsActive] = useState(false);
-  const [isTranparent, setIsTranparent] = useState(true);
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const [isTransparent, setIsTransparent] = useState<boolean>(true);
 
   const handleClick = () => {
-    setIsActive((prevState) => !prevState);
-    setLeft(isActive ? -100 : 0);
+    if (window.innerWidth <= 800) {
+      setIsActive((prevState) => {
+        document.body.style.overflow = prevState ? 'auto' : 'hidden';
+        return !prevState;
+      });
+    }
   };
 
-  if (isActive && window.innerWidth <= 768) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'auto';
-  }
+  useEffect(() => {
+    const onScroll = () => setIsTransparent(window.scrollY === 0);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-  window.onscroll = () => window.scrollY > 0 ? setIsTranparent(false) : setIsTranparent(true);
+  const topics = [
+    'Sobre mim',
+    'Serviços',
+    'Certificados',
+    'Techs',
+    'Projetos',
+    'Contato',
+  ];
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const formatTopic = (topic: string): string => {
+    const formattedTopic = topic.toLowerCase().replace(/\s+/g, '-');
+    return `#${formattedTopic}`;
+  };
 
   return (
-    <header className={`${styles.header} ${!isTranparent ? styles.filled : ''}`.trim()}>
+    <header className={`${styles.header} ${!isTransparent ? styles.filled : ''}`.trim()}>
       <button type='button' className={styles.mobileNavibar} onClick={handleClick}>
         <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
         <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
         <span className={`${styles.bar} ${isActive ? styles.barActive : ''}`.trim()}></span>
-
       </button>
-      <h1 className={styles.title}>
-        <button type='button' onClick={scrollToTop}>Portfolio</button>
-      </h1>
-      <ul className={styles.ul} style={{ left: `${left}vw` }}>
-        <li>
-          <button type='button' onClick={() => {
-            scrollToTop();
-            handleClick();
-          }}>Inicio</button>
-        </li>
-        <li>
-          <a onClick={handleClick} href="#sobre-mim">Sobre mim</a>
-        </li>
-        <li>
-          <a onClick={handleClick} href="#habilidades">Habilidades</a>
-        </li>
-        <li>
-          <a onClick={handleClick} href="#projetos">Projetos</a>
-        </li>
-        <li>
-          <a onClick={handleClick} href="#contato">Contato</a>
-        </li>
+      <h1 className={styles.title} onClick={scrollToTop}>Portfolio</h1>
+      <ul className={`${styles.ul} ${isActive ? styles.ulActive : ''}`.trim()}>
+        {topics.map((topic) => (
+          <li key={topic} className={styles.li} onClick={handleClick}>
+            <a href={formatTopic(topic)} className={styles.topic}>{topic}</a>
+          </li>
+        ))}
         <li>
           <ThemeChanger />
         </li>
