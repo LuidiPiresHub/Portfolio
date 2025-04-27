@@ -1,8 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import styles from './AboutMe.module.css';
-import { FaDesktop, FaCog, FaDownload } from 'react-icons/fa';
+import { FaDownload } from 'react-icons/fa';
 import cv from '../../assets/cv/LuidiPires.pdf';
-import certificates from '../../data/certificates';
 
 export default function AboutMe() {
   const getCurrentAge = (birthDate: string): number => {
@@ -21,7 +20,7 @@ export default function AboutMe() {
   };
 
   return (
-    <section id='sobre-mim' className={styles.aboutContainer}>
+    <section id='sobre-mim' className={`pageSection ${styles.aboutContainer}`}>
       <img className={styles.myPhoto} src='https://avatars.githubusercontent.com/u/104798394?v=4' alt='Foto de Luidi Pires' />
       <div className={styles.test}>
         <h2 className={styles.name}>Luidi Pires</h2>
@@ -49,33 +48,6 @@ export default function AboutMe() {
           Bem-vindo ao meu portfólio, onde compartilho minha paixão pela construção de experiências digitais incríveis.
         </p>
       </div>
-      <h2 className={styles.subtitle}>O que eu faço?</h2>
-      <section className={styles.servicesContainer}>
-        <article className={styles.service}>
-          <FaDesktop size={35} />
-          <h3 className={styles.area}>Front-End</h3>
-          <p>
-            Confecção de sites responsivos com design focados na experiência do
-            usuário usando as tecnologias HTML, CSS, Javascript, React.js e etc ...
-          </p>
-        </article>
-        <article className={styles.service}>
-          <FaCog size={35} />
-          <h3 className={styles.area}>Back-End</h3>
-          <p>
-            Desenvolvimento de API's completas em NodeJS para consumo tanto de páginas web quanto de
-            aplicações mobile. Incluindo a criação e manipulação de bancos de dados relacionais e não-relacionais.
-          </p>
-        </article>
-      </section>
-      <h2 className={styles.subtitle}>Meus Certificados</h2>
-      <section className={styles.certificatesContainer}>
-        {certificates.map(({ image, name, url }) => (
-          <a href={url} target='_blank' rel='noopener noreferrer' key={name}>
-            <img src={image} alt={name} className={styles.certificate} />
-          </a>
-        ))}
-      </section>
       <a href={cv} download='Currículo Luidi Pires' className={styles.download}>
         Download CV
         <FaDownload />
