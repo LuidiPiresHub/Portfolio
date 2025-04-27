@@ -1,0 +1,29 @@
+.certificateContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-inline: 0 !important;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.certificateWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.certificate {
+  margin-inline: 1rem;
+  max-width: 500px;
+  transition: transform var(--transition);
+  width: 80vw;
+}
+
+.certificate:hover {
+  transform: scale(1.03);
+}
