@@ -7,20 +7,21 @@ export default function Projects() {
   const [currentIndexes, setCurrentIndexes] = useState<number[]>(projectData.map(() => 0));
 
   useEffect(() => {
+    const transitionTime = 5000;
     const interval = setInterval(() => {
       setCurrentIndexes((prev) =>
         prev.map((index, i) =>
           (index + 1) % projectData[i].thumbnail.length
         )
       );
-    }, 5000);
+    }, transitionTime);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section id='projetos' className={styles.projectsSection}>
-      <h1 className={styles.title}>Meus Projetos</h1>
+    <section id='projetos' className={`pageSection ${styles.projectsSection}`}>
+      <h2 className={styles.subtitle}>Meus Projetos</h2>
       <div className={styles.projectsContainer}>
         {projectData.map((project, i) => (
           <article key={i} className={styles.project}>

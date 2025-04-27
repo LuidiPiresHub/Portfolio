@@ -2,14 +2,12 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
-  scroll-margin-top: var(--header-height);
 }
 
-.title {
+.subtitle {
   font-size: 2rem;
-  transition: color 100ms;
 }
 
 .projectsContainer {
@@ -17,8 +15,6 @@
   gap: 2rem;
   grid-template-columns: repeat(3, minmax(100px, 300px));
   justify-content: center;
-  margin-bottom: 5rem;
-  padding: 2rem;
 }
 
 .project {
