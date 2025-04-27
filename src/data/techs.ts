@@ -15,65 +15,80 @@ import python from '../assets/techs/python.svg';
 
 interface ITech {
   name: string;
+  image: string;
   url: string;
 }
 
 const techData: ITech[] = [
   {
     name: 'HTML',
-    url: html,
+    image: html,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
   },
   {
     name: 'CSS',
-    url: css,
+    image: css,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
   },
   {
     name: 'JavaScript',
-    url: javascript,
+    image: javascript,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
   {
     name: 'Jest',
-    url: jest,
+    image: jest,
+    url: 'https://jestjs.io/',
   },
   {
     name: 'React',
-    url: react,
+    image: react,
+    url: 'https://react.dev/',
   },
   {
     name: 'Redux',
-    url: redux,
+    image: redux,
+    url: 'https://redux.js.org/',
   },
   {
     name: 'RTL',
-    url: rtl,
+    image: rtl,
+    url: 'https://testing-library.com/docs/react-testing-library/intro/',
   },
   {
     name: 'Docker',
-    url: docker,
+    image: docker,
+    url: 'https://www.docker.com/',
   },
   {
     name: 'MySQL',
-    url: mysql,
+    image: mysql,
+    url: 'https://www.mysql.com/',
   },
   {
     name: 'Node.js',
-    url: nodeJs,
+    image: nodeJs,
+    url: 'https://nodejs.org/',
   },
   {
     name: 'Sequelize',
-    url: sequelize,
+    image: sequelize,
+    url: 'https://sequelize.org/',
   },
   {
     name: 'TypeScript',
-    url: typescript,
+    image: typescript,
+    url: 'https://www.typescriptlang.org/',
   },
   {
     name: 'MongoDB',
-    url: mongoDB,
+    image: mongoDB,
+    url: 'https://www.mongodb.com/',
   },
   {
     name: 'Python',
-    url: python,
+    image: python,
+    url: 'https://www.python.org/',
   },
 ];
 

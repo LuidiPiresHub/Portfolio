@@ -1,33 +1,61 @@
 .skills {
-  scroll-margin-top: var(--header-height);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
 }
 
-.title {
-  padding: var(--padding);
-  text-align: center;
+.subtitle {
+  font-size: 2rem;
 }
 
 .ul {
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fill, 5rem);
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   justify-content: center;
-  margin-bottom: 2rem;
   margin-inline: auto;
   max-width: 912px;
   padding: var(--padding);
+  width: 100%;
 }
 
 .li {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  font-weight: 500;
-  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
 }
 
-.tech {
-  height: 5rem;
-  width: 5rem;
+.li:hover {
+  transform: scale(1.2) translateY(-0.5rem);
+}
+
+.techLink {
+  align-items: center;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.techLogo {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.techName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (width < 375px) {
+  .ul {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+
+  .techName {
+    font-size: 1rem;
+  }
 }
