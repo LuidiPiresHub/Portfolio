@@ -50,12 +50,36 @@
   text-align: center;
 }
 
-@media (width < 375px) {
+@media (width <= 768px) {
   .ul {
     grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   }
 
   .techName {
     font-size: 1rem;
+  }
+}
+
+@media (width <= 500px) {
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .ul {
+    grid-template-columns: repeat(2, minmax(60px, 90px));
+  }
+
+  .techName {
+    font-size: 0.8rem;
+  }
+}
+
+@media (width <= 325px) {
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .ul {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   }
 }

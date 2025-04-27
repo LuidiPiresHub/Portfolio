@@ -41,3 +41,10 @@
     max-width: 330px;
   }
 }
+
+@media (width <= 500px) {
+  .subtitle {
+    font-size: 1.5em;
+  }
+}
+
