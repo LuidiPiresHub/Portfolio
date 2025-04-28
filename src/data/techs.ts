@@ -3,7 +3,7 @@ import css from '../assets/techs/css.svg';
 import javascript from '../assets/techs/javascript.svg';
 import jest from '../assets/techs/jest.svg';
 import react from '../assets/techs/react.svg';
-import redux from '../assets/techs/redux.svg';
+import tailwind from '../assets/techs/tailwind.svg';
 import rtl from '../assets/techs/rtl.svg';
 import docker from '../assets/techs/docker.svg';
 import mysql from '../assets/techs/mysql.svg';
@@ -46,9 +46,9 @@ const techData: ITech[] = [
     url: 'https://react.dev/',
   },
   {
-    name: 'Redux',
-    image: redux,
-    url: 'https://redux.js.org/',
+    name: 'Tailwind',
+    image: tailwind,
+    url: 'https://tailwindcss.com/',
   },
   {
     name: 'RTL',
@@ -73,7 +73,7 @@ const techData: ITech[] = [
   {
     name: 'Prisma',
     image: prisma,
-    url: 'https://sequelize.org/',
+    url: 'https://www.prisma.io/',
   },
   {
     name: 'TypeScript',
