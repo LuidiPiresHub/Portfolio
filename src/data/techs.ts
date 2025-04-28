@@ -8,7 +8,7 @@ import rtl from '../assets/techs/rtl.svg';
 import docker from '../assets/techs/docker.svg';
 import mysql from '../assets/techs/mysql.svg';
 import nodeJs from '../assets/techs/nodeJs.svg';
-import sequelize from '../assets/techs/sequelize.svg';
+import prisma from '../assets/techs/prisma.svg';
 import typescript from '../assets/techs/typescript.svg';
 import mongoDB from '../assets/techs/mongoDB.svg';
 import python from '../assets/techs/python.svg';
@@ -71,8 +71,8 @@ const techData: ITech[] = [
     url: 'https://nodejs.org/',
   },
   {
-    name: 'Sequelize',
-    image: sequelize,
+    name: 'Prisma',
+    image: prisma,
     url: 'https://sequelize.org/',
   },
   {
