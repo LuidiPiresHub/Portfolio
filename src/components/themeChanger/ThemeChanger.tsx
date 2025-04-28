@@ -6,11 +6,14 @@ import { ITheme } from '../../interfaces/theme.interface';
 
 export default function ThemeChanger() {
   const [theme, setTheme] = useState<ITheme>(() => {
-    const theme = getLocalstorageTheme();
-    const selectedTheme = theme ? theme : 'light';
-    document.body.className = selectedTheme;
-    return selectedTheme;
+    const storedTheme = getLocalstorageTheme();
+    const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const systemTheme: ITheme = isDarkModePreferred ? 'dark' : 'light';
+    const initialTheme = storedTheme ?? systemTheme;
+    document.body.className = initialTheme;
+    return initialTheme;
   });
+  
 
   const handleTheme = (checked: boolean) => {
     const selectedTheme = checked ? 'dark' : 'light';
